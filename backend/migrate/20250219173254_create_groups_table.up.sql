@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS groups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    pfp BLOB,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    creator TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

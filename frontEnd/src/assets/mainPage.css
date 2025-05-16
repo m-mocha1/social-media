@@ -1,0 +1,707 @@
+* {
+  transition: ease-in-out 0.3s all;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+  background-color: #0f0f0f;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+}
+.post-card form {
+  width: 20%;
+}
+hr {
+  border: none;
+  height: 0.5px;
+  background-color: #ffffff3b;
+  margin-top: 10px;
+}
+p {
+  font-size: 18px;
+  color: white;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+/* .main-container {
+  display: flex;
+  width: 100%;
+  margin: 5px;
+  padding: 20px;
+  flex-wrap: nowrap; /* Prevents wrapping */
+/* justify-content: center; Pushes items apart */
+/* }  */
+
+.sideUser {
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 1;
+  position: sticky;
+  background-color: #0f0f0f;
+  border-radius: 10px 0 0 10px;
+  top: 0;
+  right: 0;
+}
+.sidebar {
+  width: fit-content;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: rgb(15, 15, 15);
+  height: 20%;
+  border-radius: 10px;
+  display: block;
+}
+
+.glow {
+  text-shadow: 1px 1px 10px wheat;
+}
+
+.glow {
+  text-shadow: 1px 1px 10px wheat;
+}
+.content {
+  /* margin-left: auto; */
+  grid-column: span 3 / span 3;
+  grid-row: span 5 / span 5;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-top: 10px;
+}
+/*img -----------------------------------------------*/
+#pfpPro {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image fits the circle without distortion */
+  cursor: pointer; /* Shows pointer on hover */
+  transition: filter 0.3s ease;
+}
+#sp {
+  margin-top: -12px;
+  margin-left: 13px;
+}
+
+#spP {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#spPs {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#spPs {
+  align-items: center;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+#spC {
+  margin-top: -32px;
+  margin-left: 47px;
+}
+#pfpPo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image fits the circle without distortion */
+  cursor: pointer; /* Shows pointer on hover */
+  transition: filter 0.3s ease;
+}
+#pfpCo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image fits the circle without distortion */
+  cursor: pointer; /* Shows pointer on hover */
+  transition: filter 0.3s ease;
+}
+#postArea {
+  width: 80% !important;
+  margin-bottom: 8px;
+}
+.cancel {
+  margin-left: 10px;
+}
+/* welcome------------------------------------------- */
+small {
+  font-size: 11px;
+  margin-top: 2px;
+}
+#username {
+  margin-left: 10px;
+}
+.welcome {
+  margin-top: 9px;
+  background: #1e1e1e;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+.content {
+  width: 70%;
+}
+
+.welcome form {
+  margin-left: auto;
+  width: auto;
+}
+.welcome:hover {
+  background-color: #2a2a2a;
+}
+#postpic {
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.pro {
+  color: #23edc9;
+  text-shadow: 0px 1px 12px #23edc9;
+}
+.create-post {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.create-post:hover {
+  background-color: #2a2a2a;
+}
+#post:hover {
+  color: rgb(104, 192, 104);
+  text-shadow: 0px 0px 5px rgb(234, 241, 234);
+}
+.nav button {
+  margin-top: 13px;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0f0f0f;
+  padding: 7px;
+}
+.nav ul {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.nav ul li {
+  margin-top: 6px;
+  padding: 10px 20px; /* Add some padding for spacing */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+.at {
+  color: #23edc9;
+  text-shadow: 0px 1px 12px #23edc9;
+}
+.nav li:hover {
+  text-shadow: 0px 1px 12px #23edc9;
+  color: #23edc9;
+}
+/* post text area------------------------------------------- */
+textarea.txt {
+  position: relative;
+  margin-left: 9%;
+  top: 57px;
+  background: transparent;
+  border: none;
+  color: white;
+  width: 80%;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 10px;
+  resize: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  max-height: 500px;
+}
+textarea.txt:focus {
+  border: 0 none #fff;
+  overflow: hidden;
+  outline: none;
+}
+.options label {
+  color: white;
+  font-size: 15px;
+}
+.welcome form {
+  margin: 0px;
+  width: 100%;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row; /* Make sure it's horizontal */
+  align-items: center;
+  gap: 10px; /* Adds spacing between elements */
+}
+
+li {
+  list-style: none;
+  padding: 5px; /* Reduce padding for better alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+}
+
+/* Ensure all icons and buttons are properly aligned */
+ul li label,
+ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+ul li select {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* this to make the text inside the box */
+input[type='checkbox']:not(:checked),
+input[type='checkbox']:checked {
+  position: absolute;
+  left: -9999%;
+}
+input[type='checkbox'] + label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #ffffff00;
+}
+input[type='checkbox']:checked + label {
+  color: #23edc9;
+}
+input[type='checkbox'] + label:hover {
+  text-shadow: 0px 0px 12px #23edc9; /* Just an optional effect */
+  color: #23edc9;
+}
+.options {
+  display: flex;
+  align-items: center;
+}
+/* commet------------------------------------------- */
+textarea.comment {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 500px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 10px;
+  resize: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  margin-left: -35px;
+}
+.comment-box {
+  display: none;
+  margin-top: 10px;
+}
+.toggle:checked + .comment-box {
+  display: block;
+}
+label {
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+textarea.comment:focus {
+  border: 0 none #fff;
+  overflow: hidden;
+  outline: none;
+}
+.comment {
+  margin-left: 35px;
+}
+.cb {
+  margin-left: -25px;
+  margin-bottom: -5px;
+}
+.cb:hover {
+  color: #23edc9;
+  text-shadow: #23edc9;
+}
+.cb1 {
+  margin-left: -53px;
+  margin-top: 8px;
+}
+.cb1:hover {
+  color: #23edc9;
+  text-shadow: #23edc9;
+}
+.comm {
+  font: message-box;
+}
+/* --------------------------------------------------- */
+::placeholder {
+  color: rgba(255, 255, 255, 0.568);
+}
+
+#compic {
+  display: block;
+  margin-top: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  max-width: 60%;
+  height: auto;
+  border-radius: 5px;
+}
+#out:hover {
+  color: #f80707;
+  text-shadow: 0px 0px 12px #f80707;
+}
+#post:hover {
+  text-shadow: 0px 0px 12px #5ff807;
+}
+button {
+  color: #f4f1f1;
+  padding: 0.1em 0.7em;
+  font-size: 23px;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+a {
+  color: #f4f1f1;
+  padding: 0.1em 0.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.create-post {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+}
+.post-feed {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  
+}
+.post-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-bottom: 20px;
+}
+/* .post-card {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 20px ;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;    
+} */
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.post-card-single {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-bottom: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+#postImg {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+.post-card:hover {
+  background: #2e2e2e;
+}
+.post-card p {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.post-card-single:hover {
+  background: #2e2e2e;
+}
+.post-card-single p {
+  margin-bottom: 10px;
+}
+.nolike {
+  color: #f4f1f1;
+}
+.nolike:hover {
+  text-shadow: 0px 0px 12px #23edc9;
+  color: #23edc9;
+}
+.liked {
+  color: #23edc9;
+}
+.liked:hover {
+  color: #ed2323;
+  text-shadow: 0px 0px 12px #ed2323;
+}
+/* comment like------------------------------- */
+.nolikeC {
+  color: #f4f1f1;
+  font-size: 15px;
+}
+.nolikeC:hover {
+  text-shadow: 0px 0px 12px #23edc9;
+  color: #23edc9;
+}
+.likedC {
+  color: #23edc9;
+  font-size: 15px;
+}
+.likedC:hover {
+  color: #ed2323;
+  text-shadow: 0px 0px 12px #ed2323;
+}
+#comCont {
+  position: relative;
+  left: -29px;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 7px;
+  padding: 10px;
+  background-color: #0f0f0f;
+  height: 20%;
+  border-radius: 10px;
+  display: block;
+}
+.on {
+  transition: all 1s;
+  border: 4px solid #4caf50;
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 5px; /* Space between image and text */
+}
+.off {
+  transition: all 1s;
+  border: 4px solid gray;
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 8px;
+}
+
+.user-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Chat Box Styling */
+
+/* Chat Header */
+.chat-header {
+  background-color: #282828; /* Slightly lighter for header contrast */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+.chat-header button {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* Chat Messages */
+
+#res {
+  /* display: flex; */
+  flex-direction: row-reverse;
+  align-content: center;
+  justify-content: center;
+  padding: 4%;
+  flex-direction: row-reverse;
+  align-content: center;
+  justify-content: center;
+  padding: 4%;
+}
+/* #res{
+    width: 22%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px; 
+    background-color: #0f0f0f;
+    height: 20%;
+    border-radius: 10px;
+    display: block;
+    float: right;
+} */
+/* .sent {
+    background-color: #444; 
+    align-self: flex-end;
+    text-align: right;
+  } */
+/* .received {
+    position: relative;
+    background-color: #282828;
+    align-self: flex-start;
+    text-align: left;
+    left: 30px;
+} */
+.message-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.message-container.sent {
+  justify-content: flex-end;
+}
+.message-container.received {
+  justify-content: flex-start;
+}
+.message {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.message.sent {
+  background-color: #161716;
+  margin-right: 10px;
+}
+.message.received {
+  background-color: #363535;
+  margin-left: 10px;
+}
+#mesPfp,
+#recMesPfp {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+/* Chat Input */
+.chat-input {
+  position: static;
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #444;
+  bottom: 19px;
+}
+.chat-input input {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.chat-input button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.chat-input input:focus,
+.chat-input button:hover {
+  outline: none;
+  background-color: #555;
+}
+.notification-badge {
+  position: absolute; /* Ensure it overlaps correctly */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  font-size: 12px;
+  margin-left: 4px;
+}
+.div433 {
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+.fing3{
+  grid-row: span 5 / span 5;
+  grid-column-start: 2;
+}
+.fer3 {
+  grid-row: span 5 / span 5;
+  grid-column-start: 4;
+}
