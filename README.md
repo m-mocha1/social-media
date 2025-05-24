@@ -1,4 +1,4 @@
-# SocialSphere
+# Social-media
 
 A Facebook-like social network built with a Go & SQLite backend and a Vue.js frontend, containerized with Docker.
 
